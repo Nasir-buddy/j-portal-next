@@ -1,0 +1,317 @@
+@import "tailwindcss";
+
+/* ===== CSS VARIABLES FOR LIGHT MODE ===== */
+:root {
+  /* Primary Colors */
+  --primary-50: #eff6ff;
+  --primary-100: #dbeafe;
+  --primary-200: #bfdbfe;
+  --primary-300: #93c5fd;
+  --primary-400: #60a5fa;
+  --primary-500: #3b82f6;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --primary-800: #1e40af;
+  --primary-900: #1e3a8a;
+  --primary-950: #172554;
+
+  /* Neutral Colors */
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-300: #d4d4d4;
+  --neutral-400: #a3a3a3;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+  --neutral-950: #0a0a0a;
+
+  /* Success Colors */
+  --success-50: #f0fdf4;
+  --success-100: #dcfce7;
+  --success-200: #bbf7d0;
+  --success-300: #86efac;
+  --success-400: #4ade80;
+  --success-500: #22c55e;
+  --success-600: #16a34a;
+  --success-700: #15803d;
+  --success-800: #166534;
+  --success-900: #14532d;
+
+  /* Warning Colors */
+  --warning-50: #fffbeb;
+  --warning-100: #fef3c7;
+  --warning-200: #fde68a;
+  --warning-300: #fcd34d;
+  --warning-400: #fbbf24;
+  --warning-500: #f59e0b;
+  --warning-600: #d97706;
+  --warning-700: #b45309;
+  --warning-800: #92400e;
+  --warning-900: #78350f;
+
+  /* Error Colors */
+  --error-50: #fef2f2;
+  --error-100: #fee2e2;
+  --error-200: #fecaca;
+  --error-300: #fca5a5;
+  --error-400: #f87171;
+  --error-500: #ef4444;
+  --error-600: #dc2626;
+  --error-700: #b91c1c;
+  --error-800: #991b1b;
+  --error-900: #7f1d1d;
+
+  /* Semantic Colors - Light Mode */
+  --background: var(--neutral-50);
+  --foreground: var(--neutral-900);
+  --card: #ffffff;
+  --card-foreground: var(--neutral-900);
+  --popover: #ffffff;
+  --popover-foreground: var(--neutral-900);
+  --primary: var(--primary-600);
+  --primary-foreground: #ffffff;
+  --secondary: var(--neutral-100);
+  --secondary-foreground: var(--neutral-900);
+  --muted: var(--neutral-100);
+  --muted-foreground: var(--neutral-600);
+  --accent: var(--neutral-100);
+  --accent-foreground: var(--neutral-900);
+  --destructive: var(--error-500);
+  --destructive-foreground: #ffffff;
+  --border: var(--neutral-200);
+  --input: var(--neutral-200);
+  --ring: var(--primary-500);
+  --radius: 0.5rem;
+
+  /* Job Portal Specific Colors */
+  --job-card-bg: #ffffff;
+  --job-card-border: var(--neutral-200);
+  --job-card-hover: var(--neutral-50);
+  --status-active: var(--success-500);
+  --status-pending: var(--warning-500);
+  --status-rejected: var(--error-500);
+  --status-draft: var(--neutral-500);
+  --salary-highlight: var(--success-600);
+  --company-logo-bg: var(--neutral-100);
+  --search-box-bg: #ffffff;
+  --search-box-border: var(--neutral-300);
+  --filter-panel-bg: #ffffff;
+  --filter-panel-border: var(--neutral-200);
+}
+
+/* ===== CSS VARIABLES FOR DARK MODE ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Semantic Colors - Dark Mode */
+    --background: var(--neutral-950);
+    --foreground: var(--neutral-50);
+    --card: var(--neutral-900);
+    --card-foreground: var(--neutral-50);
+    --popover: var(--neutral-900);
+    --popover-foreground: var(--neutral-50);
+    --primary: var(--primary-400);
+    --primary-foreground: var(--neutral-950);
+    --secondary: var(--neutral-800);
+    --secondary-foreground: var(--neutral-50);
+    --muted: var(--neutral-800);
+    --muted-foreground: var(--neutral-400);
+    --accent: var(--neutral-800);
+    --accent-foreground: var(--neutral-50);
+    --destructive: var(--error-400);
+    --destructive-foreground: var(--neutral-950);
+    --border: var(--neutral-800);
+    --input: var(--neutral-800);
+    --ring: var(--primary-400);
+
+    /* Job Portal Specific Colors - Dark Mode */
+    --job-card-bg: var(--neutral-900);
+    --job-card-border: var(--neutral-800);
+    --job-card-hover: var(--neutral-800);
+    --status-active: var(--success-400);
+    --status-pending: var(--warning-400);
+    --status-rejected: var(--error-400);
+    --status-draft: var(--neutral-400);
+    --salary-highlight: var(--success-400);
+    --company-logo-bg: var(--neutral-800);
+    --search-box-bg: var(--neutral-900);
+    --search-box-border: var(--neutral-700);
+    --filter-panel-bg: var(--neutral-900);
+    --filter-panel-border: var(--neutral-800);
+  }
+}
+
+/* ===== MANUAL DARK MODE CLASS ===== */
+[data-theme="dark"] {
+  --background: var(--neutral-950);
+  --foreground: var(--neutral-50);
+  --card: var(--neutral-900);
+  --card-foreground: var(--neutral-50);
+  --popover: var(--neutral-900);
+  --popover-foreground: var(--neutral-50);
+  --primary: var(--primary-400);
+  --primary-foreground: var(--neutral-950);
+  --secondary: var(--neutral-800);
+  --secondary-foreground: var(--neutral-50);
+  --muted: var(--neutral-800);
+  --muted-foreground: var(--neutral-400);
+  --accent: var(--neutral-800);
+  --accent-foreground: var(--neutral-50);
+  --destructive: var(--error-400);
+  --destructive-foreground: var(--neutral-950);
+  --border: var(--neutral-800);
+  --input: var(--neutral-800);
+  --ring: var(--primary-400);
+
+  /* Job Portal Specific Colors - Dark Mode */
+  --job-card-bg: var(--neutral-900);
+  --job-card-border: var(--neutral-800);
+  --job-card-hover: var(--neutral-800);
+  --status-active: var(--success-400);
+  --status-pending: var(--warning-400);
+  --status-rejected: var(--error-400);
+  --status-draft: var(--neutral-400);
+  --salary-highlight: var(--success-400);
+  --company-logo-bg: var(--neutral-800);
+  --search-box-bg: var(--neutral-900);
+  --search-box-border: var(--neutral-700);
+  --filter-panel-bg: var(--neutral-900);
+  --filter-panel-border: var(--neutral-800);
+}
+
+/* ===== TAILWIND THEME INTEGRATION ===== */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ===== BASE STYLES ===== */
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary-foreground);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.text-success {
+  color: var(--status-active);
+}
+
+.text-warning {
+  color: var(--status-pending);
+}
+
+.text-error {
+  color: var(--status-rejected);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-muted {
+  background-color: var(--muted);
+}
+
+.bg-card {
+  background-color: var(--card);
+}
+
+.border-primary {
+  border-color: var(--primary);
+}
+
+.border-secondary {
+  border-color: var(--border);
+}
+
+/* ===== JOB PORTAL SPECIFIC UTILITIES ===== */
+.job-card {
+  background-color: var(--job-card-bg);
+  border: 1px solid var(--job-card-border);
+  transition: all 0.2s ease;
+}
+
+.job-card:hover {
+  background-color: var(--job-card-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-box {
+  background-color: var(--search-box-bg);
+  border: 1px solid var(--search-box-border);
+}
+
+.filter-panel {
+  background-color: var(--filter-panel-bg);
+  border: 1px solid var(--filter-panel-border);
+}
+
+.status-active {
+  color: var(--status-active);
+}
+
+.status-pending {
+  color: var(--status-pending);
+}
+
+.status-rejected {
+  color: var(--status-rejected);
+}
+
+.status-draft {
+  color: var(--status-draft);
+}
+
+.salary-highlight {
+  color: var(--salary-highlight);
+  font-weight: 600;
+}
+
+/* ===== SMOOTH TRANSITIONS ===== */
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
