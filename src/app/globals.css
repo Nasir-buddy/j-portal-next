@@ -408,6 +408,15 @@ body {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
+/* Hover effects for job entries */
+.hover\:bg-gray-50:hover {
+  background-color: var(--muted) !important;
+}
+
+[data-theme="dark"] .hover\:bg-gray-50:hover {
+  background-color: var(--accent) !important;
+}
+
 .advertisement-placeholder {
   background: linear-gradient(135deg, var(--muted) 0%, var(--border) 100%);
   border: 2px dashed var(--border);
