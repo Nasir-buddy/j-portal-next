@@ -64,125 +64,88 @@
   --error-800: #991b1b;
   --error-900: #7f1d1d;
 
-  /* Semantic Colors - Light Mode */
-  --background: var(--neutral-50);
-  --foreground: var(--neutral-900);
+  /* Semantic Colors - Light Mode (Default) */
+  --background: #ffffff;
+  --foreground: #171717;
   --card: #ffffff;
-  --card-foreground: var(--neutral-900);
+  --card-foreground: #171717;
   --popover: #ffffff;
-  --popover-foreground: var(--neutral-900);
-  --primary: var(--primary-600);
+  --popover-foreground: #171717;
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --secondary: var(--neutral-100);
-  --secondary-foreground: var(--neutral-900);
-  --muted: var(--neutral-100);
-  --muted-foreground: var(--neutral-600);
-  --accent: var(--neutral-100);
-  --accent-foreground: var(--neutral-900);
-  --destructive: var(--error-500);
+  --secondary: #f5f5f5;
+  --secondary-foreground: #171717;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --accent: #f5f5f5;
+  --accent-foreground: #171717;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: var(--neutral-200);
-  --input: var(--neutral-200);
-  --ring: var(--primary-500);
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #3b82f6;
   --radius: 0.5rem;
 
   /* Job Portal Specific Colors */
   --job-card-bg: #ffffff;
-  --job-card-border: var(--neutral-200);
-  --job-card-hover: var(--neutral-50);
-  --status-active: var(--success-500);
-  --status-pending: var(--warning-500);
-  --status-rejected: var(--error-500);
-  --status-draft: var(--neutral-500);
-  --salary-highlight: var(--success-600);
-  --company-logo-bg: var(--neutral-100);
+  --job-card-border: #e5e5e5;
+  --job-card-hover: #fafafa;
+  --status-active: #22c55e;
+  --status-pending: #f59e0b;
+  --status-rejected: #ef4444;
+  --status-draft: #737373;
+  --salary-highlight: #16a34a;
+  --company-logo-bg: #f5f5f5;
   --search-box-bg: #ffffff;
-  --search-box-border: var(--neutral-300);
+  --search-box-border: #d4d4d4;
   --filter-panel-bg: #ffffff;
-  --filter-panel-border: var(--neutral-200);
+  --filter-panel-border: #e5e5e5;
 }
 
-/* ===== CSS VARIABLES FOR DARK MODE ===== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Semantic Colors - Dark Mode */
-    --background: var(--neutral-950);
-    --foreground: var(--neutral-50);
-    --card: var(--neutral-900);
-    --card-foreground: var(--neutral-50);
-    --popover: var(--neutral-900);
-    --popover-foreground: var(--neutral-50);
-    --primary: var(--primary-400);
-    --primary-foreground: var(--neutral-950);
-    --secondary: var(--neutral-800);
-    --secondary-foreground: var(--neutral-50);
-    --muted: var(--neutral-800);
-    --muted-foreground: var(--neutral-400);
-    --accent: var(--neutral-800);
-    --accent-foreground: var(--neutral-50);
-    --destructive: var(--error-400);
-    --destructive-foreground: var(--neutral-950);
-    --border: var(--neutral-800);
-    --input: var(--neutral-800);
-    --ring: var(--primary-400);
-
-    /* Job Portal Specific Colors - Dark Mode */
-    --job-card-bg: var(--neutral-900);
-    --job-card-border: var(--neutral-800);
-    --job-card-hover: var(--neutral-800);
-    --status-active: var(--success-400);
-    --status-pending: var(--warning-400);
-    --status-rejected: var(--error-400);
-    --status-draft: var(--neutral-400);
-    --salary-highlight: var(--success-400);
-    --company-logo-bg: var(--neutral-800);
-    --search-box-bg: var(--neutral-900);
-    --search-box-border: var(--neutral-700);
-    --filter-panel-bg: var(--neutral-900);
-    --filter-panel-border: var(--neutral-800);
-  }
-}
-
-/* ===== MANUAL DARK MODE CLASS ===== */
+/* ===== DARK MODE VARIABLES ===== */
 [data-theme="dark"] {
-  --background: var(--neutral-950);
-  --foreground: var(--neutral-50);
-  --card: var(--neutral-900);
-  --card-foreground: var(--neutral-50);
-  --popover: var(--neutral-900);
-  --popover-foreground: var(--neutral-50);
-  --primary: var(--primary-400);
-  --primary-foreground: var(--neutral-950);
-  --secondary: var(--neutral-800);
-  --secondary-foreground: var(--neutral-50);
-  --muted: var(--neutral-800);
-  --muted-foreground: var(--neutral-400);
-  --accent: var(--neutral-800);
-  --accent-foreground: var(--neutral-50);
-  --destructive: var(--error-400);
-  --destructive-foreground: var(--neutral-950);
-  --border: var(--neutral-800);
-  --input: var(--neutral-800);
-  --ring: var(--primary-400);
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --card: #171717;
+  --card-foreground: #fafafa;
+  --popover: #171717;
+  --popover-foreground: #fafafa;
+  --primary: #60a5fa;
+  --primary-foreground: #0a0a0a;
+  --secondary: #262626;
+  --secondary-foreground: #fafafa;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --accent: #262626;
+  --accent-foreground: #fafafa;
+  --destructive: #f87171;
+  --destructive-foreground: #0a0a0a;
+  --border: #262626;
+  --input: #262626;
+  --ring: #60a5fa;
 
   /* Job Portal Specific Colors - Dark Mode */
-  --job-card-bg: var(--neutral-900);
-  --job-card-border: var(--neutral-800);
-  --job-card-hover: var(--neutral-800);
-  --status-active: var(--success-400);
-  --status-pending: var(--warning-400);
-  --status-rejected: var(--error-400);
-  --status-draft: var(--neutral-400);
-  --salary-highlight: var(--success-400);
-  --company-logo-bg: var(--neutral-800);
-  --search-box-bg: var(--neutral-900);
-  --search-box-border: var(--neutral-700);
-  --filter-panel-bg: var(--neutral-900);
-  --filter-panel-border: var(--neutral-800);
+  --job-card-bg: #171717;
+  --job-card-border: #262626;
+  --job-card-hover: #262626;
+  --status-active: #4ade80;
+  --status-pending: #fbbf24;
+  --status-rejected: #f87171;
+  --status-draft: #a3a3a3;
+  --salary-highlight: #4ade80;
+  --company-logo-bg: #262626;
+  --search-box-bg: #171717;
+  --search-box-border: #404040;
+  --filter-panel-bg: #171717;
+  --filter-panel-border: #262626;
 }
 
+
+
+
+
 /* ===== TAILWIND THEME INTEGRATION ===== */
-@theme inline {
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -216,6 +179,39 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== THEME UTILITY CLASSES ===== */
+.bg-background {
+  background-color: var(--background);
+}
+
+.bg-card {
+  background-color: var(--card);
+}
+
+.text-foreground {
+  color: var(--foreground);
+}
+
+.text-muted-foreground {
+  color: var(--muted-foreground);
+}
+
+.border-border {
+  border-color: var(--border);
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.bg-muted {
+  background-color: var(--muted);
 }
 
 /* ===== UTILITY CLASSES ===== */
@@ -280,6 +276,15 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* ===== CARD STYLES ===== */
+.card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  color: var(--card-foreground);
+}
+
+
+
 .search-box {
   background-color: var(--search-box-bg);
   border: 1px solid var(--search-box-border);
@@ -314,6 +319,19 @@ body {
 /* ===== SMOOTH TRANSITIONS ===== */
 * {
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Dark mode toggle button styles */
+.dark-mode-toggle {
+  transition: all 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.05);
+}
+
+.dark-mode-toggle:active {
+  transform: scale(0.95);
 }
 
 /* ===== JOB PORTAL HOMEPAGE SPECIFIC STYLES ===== */
@@ -368,7 +386,7 @@ body {
 }
 
 .trending-job-item:hover {
-  background-color: #f8f9fa;
+  background-color: var(--accent);
   padding-left: 0.5rem;
 }
 
@@ -381,9 +399,23 @@ body {
   background-color: #16a34a !important;
 }
 
+/* Dark mode specific adjustments */
+[data-theme="dark"] .job-portal-header {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+[data-theme="dark"] .job-card-hover:hover {
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
 .advertisement-placeholder {
-  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-  border: 2px dashed #d1d5db;
+  background: linear-gradient(135deg, var(--muted) 0%, var(--border) 100%);
+  border: 2px dashed var(--border);
+}
+
+[data-theme="dark"] .advertisement-placeholder {
+  background: linear-gradient(135deg, var(--neutral-800) 0%, var(--neutral-700) 100%);
+  border: 2px dashed var(--neutral-600);
 }
 
 /* ===== RESPONSIVE DESIGN ENHANCEMENTS ===== */
