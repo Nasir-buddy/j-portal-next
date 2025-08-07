@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import { Search, Menu, ChevronRight } from 'lucide-react'
+import { Search, Menu, ChevronRight, TrendingUp, Users, Calendar, Award, BookOpen, FileText, Bell, ArrowRight } from 'lucide-react'
 import { useTheme } from '@/components/ThemeProvider'
 import { ThemeToggle } from '@/components/ThemeToggle'
 
@@ -14,186 +14,192 @@ const HomePage = () => {
     "Peon Jobs 2022 | चपरासी 1673 पदों पर 8वीं 10वीं पास के लिए निकली बंपर भर्ती",
     "Peon Jobs 2022 | चपरासी 1673 पदों पर 8वीं 10वीं पास के लिए निकली बंपर भर्ती",
     "Peon Jobs 2022 | चपरासी 1673 पदों पर 8वीं 10वीं पास के लिए निकली बंपर भर्ती",
-    "Peon Jobs 2022 | चपरासी 1673 पदों पर 8वीं 10वीं पास के लिए निकली बंपर भर्ती",
-    "Peon Jobs 2022 | चपरासी 1673 पदों पर 8वीं 10वीं पास के लिए निकली बंपर भर्ती",
-    "Peon Jobs 2022 | चपरासी 1673 पदों पर 8वीं 10वीं पास के लिए निकली बंपर भर्ती",
     "Peon Jobs 2022 | चपरासी 1673 पदों पर 8वीं 10वीं पास के लिए निकली बंपर भर्ती"
   ]
 
-  const stories = [
-    { name: "Naresh Bhart..", image: "/images/avatars/ashoka-chakra.jpg" },
-    { name: "SRP Educatio..", image: "/images/avatars/ashoka-chakra.jpg" },
-    { name: "Naresh Bhart..", image: "/images/avatars/ashoka-chakra.jpg" },
-    { name: "SRP Educatio..", image: "/images/avatars/ashoka-chakra.jpg" },
-    { name: "Naresh Bhart..", image: "/images/avatars/ashoka-chakra.jpg" },
-    { name: "SRP Educatio..", image: "/images/avatars/ashoka-chakra.jpg" }
-  ]
-
   const categories = [
-    "सरकारी नौकरी",
-    "प्रवेश पत्र", 
-    "सरकारी रिजल्ट",
-    "सरकारी योजना",
-    "ब्रेकिंग न्यूज",
-    "उत्तर कुंजी / सिलेबस"
+    { name: "सरकारी नौकरी", icon: TrendingUp, count: "2.5k+", description: "Latest government job opportunities" },
+    { name: "प्रवेश पत्र", icon: FileText, count: "1.2k+", description: "Admit cards and hall tickets" },
+    { name: "सरकारी रिजल्ट", icon: Award, count: "3.1k+", description: "Government exam results" },
+    { name: "सरकारी योजना", icon: BookOpen, count: "890+", description: "Government schemes and policies" },
+    { name: "ब्रेकिंग न्यूज", icon: Bell, count: "450+", description: "Latest breaking news updates" },
+    { name: "उत्तर कुंजी / सिलेबस", icon: Users, count: "1.8k+", description: "Answer keys and syllabus" }
   ]
 
   // Prevent hydration mismatch
   if (!mounted) {
     return (
-      <div 
-        className="min-h-screen transition-colors duration-300"
-        style={{
-          backgroundColor: 'var(--background)',
-          color: 'var(--foreground)'
-        }}
-      >
+      <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
         <div className="flex items-center justify-center h-screen">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div>
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-600"></div>
         </div>
       </div>
     )
   }
 
   return (
-    <div 
-      className="min-h-screen transition-colors duration-300"
-      style={{
-        backgroundColor: 'var(--background)',
-        color: 'var(--foreground)'
-      }}
-    >
-      {/* Header */}
-      <header 
-        className="border-b"
-        style={{
-          backgroundColor: 'var(--card)',
-          borderColor: 'var(--border)'
-        }}
-      >
+    <div className="min-h-screen bg-background text-foreground transition-colors duration-300">
+      {/* Professional Header */}
+      <header className="border-b border-border sticky top-0 z-50 backdrop-blur-sm bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Top Header */}
           <div className="flex justify-between items-center py-4">
-            <div className="flex items-center">
-              <Menu className="h-6 w-6 text-muted-foreground cursor-pointer hover:text-green-600 transition-colors" />
-            </div>
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-green-600">Sarkariprep.in</h1>
-            </div>
             <div className="flex items-center space-x-4">
-              <Search className="h-5 w-5 text-muted-foreground cursor-pointer hover:text-green-600 transition-colors" />
-              <ThemeToggle size="md" />
-              <div className="w-8 h-8 bg-gray-300 rounded-full cursor-pointer"></div>
+              <button 
+                className="p-2 rounded-lg hover:bg-accent cursor-pointer transition-all duration-200"
+                aria-label="Open menu"
+              >
+                <Menu className="h-5 w-5 text-foreground" />
+              </button>
+            </div>
+            
+            <div className="flex items-center">
+              <h1 className="text-2xl font-bold text-foreground">
+                Sarkariprep.in
+              </h1>
+            </div>
+            
+            <div className="flex items-center space-x-3">
+              <button 
+                className="p-2 rounded-lg hover:bg-accent transition-all duration-200"
+                aria-label="Search"
+              >
+                <Search className="h-5 w-5 text-foreground" />
+              </button>
+              <ThemeToggle size="sm" />
+              <div className="w-8 h-8 bg-foreground text-background rounded-full cursor-pointer flex items-center justify-center font-medium text-sm">
+                U
+              </div>
             </div>
           </div>
           
           {/* Navigation */}
-          <nav 
-            className="py-3 border-t"
-            style={{ borderColor: 'var(--border)' }}
-          >
-            <div 
-              className="flex items-center space-x-6 text-sm font-medium overflow-x-auto"
-              style={{ color: 'var(--muted-foreground)' }}
-            >
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">होम</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">गवर्नमेंट जॉब</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">न्यूज़</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">प्राइवेट जॉब</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">राज्य</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">सरकारी योजना</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">सिलेबस</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">उत्तर कुंजी</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">प्रवेश पत्र</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">रिजल्ट</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">करंट अफेयर्स</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">टेस्ट सीरीज</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">सामान ज्ञान</a>
-              <a href="#" className="hover:text-green-600 transition-colors whitespace-nowrap">वेब स्टोरी</a>
+          <nav className="py-3 border-t border-border">
+            <div className="flex items-center space-x-8 text-sm font-medium overflow-x-auto scrollbar-hide">
+              {[
+                "होम", "गवर्नमेंट जॉब", "न्यूज़", "प्राइवेट जॉब", "राज्य", 
+                "सरकारी योजना", "सिलेबस", "उत्तर कुंजी", "प्रवेश पत्र", 
+                "रिजल्ट", "करंट अफेयर्स", "टेस्ट सीरीज", "सामान ज्ञान", "वेब स्टोरी"
+              ].map((item, index) => (
+                <a 
+                  key={index}
+                  href="#" 
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200 whitespace-nowrap"
+                >
+                  {item}
+                </a>
+              ))}
             </div>
           </nav>
         </div>
       </header>
 
-      {/* Stories Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <span className="text-sm font-medium mr-2" style={{ color: 'var(--foreground)' }}>STORIES</span>
-            <span className="text-sm font-medium text-green-600">NOW.</span>
-          </div>
-          <div className="flex items-center space-x-3">
-            {stories.map((story, index) => (
-              <div key={index} className="flex flex-col items-center space-y-1">
-                <div 
-                  className="w-12 h-12 rounded-full flex items-center justify-center"
-                  style={{ backgroundColor: 'var(--muted)' }}
-                >
-                  <div className="w-8 h-8 bg-blue-600 rounded-full"></div>
-                </div>
-                <span className="text-xs text-center" style={{ color: 'var(--muted-foreground)' }}>
-                  {story.name}
-                </span>
-              </div>
-            ))}
-            <ChevronRight className="h-5 w-5 text-muted-foreground" />
+      {/* Hero Section */}
+      <section className="py-12 border-b border-border">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Find Your Dream Government Job
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Discover thousands of government job opportunities, exam results, and career resources all in one place.
+            </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Main Content - 6 Column Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category, index) => (
-            <div 
-              key={index}
-              className="rounded-lg border p-4"
-              style={{
-                backgroundColor: 'var(--card)',
-                borderColor: 'var(--border)'
-              }}
-            >
-              <h3 
-                className="text-lg font-bold mb-4 text-center"
-                style={{ color: 'var(--foreground)' }}
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Categories Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+          {categories.map((category, index) => {
+            const IconComponent = category.icon
+            return (
+              <div 
+                key={index}
+                className="group"
               >
-                {category}
-              </h3>
-              <div className="space-y-2">
-                {jobEntries.map((job, jobIndex) => (
-                  <div 
-                    key={jobIndex} 
-                    className={`flex items-start space-x-2 p-2 rounded hover:bg-gray-50 cursor-pointer transition-colors ${
-                      index % 2 === 0 ? 'bg-muted' : ''
-                    }`}
-                    style={{ color: 'var(--muted-foreground)' }}
-                  >
-                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-sm leading-relaxed">
-                      {job}
-                    </p>
+                <div className="rounded-xl border border-border bg-card p-6 h-full hover:shadow-lg transition-all duration-300 hover:border-border/50">
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-foreground" />
+                    </div>
+                    <span className="text-sm font-medium text-muted-foreground">
+                      {category.count}
+                    </span>
                   </div>
-                ))}
+                  
+                  {/* Title and Description */}
+                  <h3 className="text-xl font-semibold text-foreground mb-2">
+                    {category.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-6">
+                    {category.description}
+                  </p>
+                  
+                  {/* Job Entries */}
+                  <div className="space-y-3 mb-6">
+                    {jobEntries.slice(0, 4).map((job, jobIndex) => (
+                      <div 
+                        key={jobIndex} 
+                        className="flex items-start space-x-3 p-3 rounded-lg hover:bg-accent cursor-pointer transition-colors duration-200"
+                      >
+                        <div className="w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 bg-muted-foreground"></div>
+                        <p className="text-sm text-foreground leading-relaxed">
+                          {job}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                  
+                  {/* View More Button */}
+                  <button className="w-full py-2.5 px-4 rounded-lg bg-foreground text-background font-medium hover:bg-foreground/90 transition-colors duration-200 flex items-center justify-center space-x-2">
+                    <span>View All</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
-      </div>
 
-      {/* Footer */}
-      <footer 
-        className="border-t mt-12"
-        style={{
-          backgroundColor: 'var(--muted)',
-          borderColor: 'var(--border)'
-        }}
-      >
+        {/* Stats Section */}
+        <section className="py-12 border-t border-border">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-foreground mb-2">50K+</div>
+              <div className="text-sm text-muted-foreground">Active Jobs</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-foreground mb-2">25K+</div>
+              <div className="text-sm text-muted-foreground">Companies</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-foreground mb-2">100K+</div>
+              <div className="text-sm text-muted-foreground">Job Seekers</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-foreground mb-2">95%</div>
+              <div className="text-sm text-muted-foreground">Success Rate</div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Professional Footer */}
+      <footer className="border-t border-border bg-muted">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div 
-            className="text-center text-sm"
-            style={{ color: 'var(--muted-foreground)' }}
-          >
-            ©2022. Sarkariprep Education Group | About | Contact | Privacy Policy | Disclaimer | Sitemap | DMCA
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-sm text-muted-foreground">
+              © 2024 Sarkariprep Education Group. All rights reserved.
+            </div>
+            <div className="flex items-center space-x-6 text-sm">
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">About</a>
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Contact</a>
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Privacy Policy</a>
+              <a href="#" className="text-muted-foreground hover:text-foreground transition-colors">Terms of Service</a>
+            </div>
           </div>
         </div>
       </footer>
